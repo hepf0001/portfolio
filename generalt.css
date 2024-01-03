@@ -173,11 +173,19 @@ p {
 h1 {
   font-family: "Lato", sans-serif;
   color: #3f4e4f;
+  font-size: 45px;
 }
 
 h2 {
   font-family: "Lato", sans-serif;
   color: #3f4e4f;
+  font-size: 30px;
+}
+
+li {
+  font-family: "Lato", sans-serif;
+  color: #3f4e4f;
+  font-size: 20px;
 }
 
 /******************** Luft ********************/
@@ -189,6 +197,7 @@ h1 {
 
 h2 {
   padding: 20px;
+  padding-top: 30px;
 }
 
 p {
@@ -343,14 +352,6 @@ footer {
   background-color: #919f89;
 }
 
-/**** Tekst ****/
-.tema_2_2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 /**** Luft ****/
 .tema_2 {
   padding-bottom: 50px;
@@ -392,6 +393,11 @@ footer {
   display: grid;
   place-items: center;
   position: relative;
+  padding-bottom: 20px;
+}
+
+.lidt_om_mig_1 {
+  padding: 20px;
 }
 
 .h1_om_mig {
@@ -421,6 +427,21 @@ footer {
 
 .skills {
   background-color: #919f89;
+}
+
+.skills_1 ul :hover {
+  color: #3f4e4f;
+}
+
+.skills_1 {
+  padding-left: 40px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.kode_design {
+  padding-bottom: 50px;
 }
 
 /********************* DESKTOP ********************/
@@ -583,13 +604,20 @@ footer {
 
   .skills_1 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .kode_design {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+  }
+
+  .skills_1 {
+    padding-left: 120px;
+  }
+
+  .kode_design {
+    padding-top: 30px;
   }
 }
