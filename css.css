@@ -129,7 +129,6 @@ video {
 
 header {
   background-color: #91a6ad;
-  /*background-color: #98a7ac;*/
   position: sticky;
   padding-bottom: 25px;
   padding-top: 5px;
@@ -225,8 +224,12 @@ p {
   transform: translate(-50%, -50%);
   z-index: 1;
   color: #fcfbf9;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bolder;
+}
+
+.baggrund {
+  background-color: #91a6ad;
 }
 
 /**************** Footer *******************/
@@ -497,24 +500,6 @@ footer {
   padding-right: 20px;
 }
 
-/**** Galleri ****/
-.galleri_h2 {
-  padding-top: 100px;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
-  padding-top: 20px;
-  padding-bottom: 100px;
-}
-
-.gallery img {
-  height: 100%;
-  object-fit: cover;
-}
-
 .tema_2_web_billede_2 {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -526,9 +511,11 @@ footer {
 }
 
 /********************* Tema 4 ********************/
+
+/**** Galleri ****/
 .gallery_2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding-top: 20px;
   padding-bottom: 100px;
@@ -540,6 +527,24 @@ footer {
 }
 
 /********************* Tema 5 ********************/
+
+/**** Galleri ****/
+.galleri_h2 {
+  padding-top: 100px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.gallery img {
+  height: 100%;
+  object-fit: cover;
+}
 .green_farve_temasider {
   background-color: #919f89;
   padding-top: 40px;
@@ -556,16 +561,6 @@ footer {
 }
 
 /**** Videoer ****/
-iframe {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-}
-
-.iframe {
-  padding-top: 80px;
-}
-
 video {
   width: 100%;
   height: auto;
@@ -789,7 +784,17 @@ video {
     padding-right: 100px;
   }
 
+  /********************* Tema 4 ********************/
+  .gallery_2 {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
   /********************* Tema 5 ********************/
+
+  /**** Galleri ****/
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
 
   /**** Videoer ****/
   iframe {
