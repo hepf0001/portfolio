@@ -15,6 +15,13 @@ video {
   display: block;
 }
 
+/*@media (min-width: 850px) {
+  main {
+    margin: 0 auto 0 auto;
+    max-width: 1200px;
+  }
+}*/
+
 /******************** menu ********************/
 
 @media (max-width: 1200px) {
@@ -475,10 +482,8 @@ footer {
   padding-bottom: 50px;
 }
 
-.green_farve_temasider {
-  background-color: #919f89;
-  padding-top: 40px;
-  padding-bottom: 80px;
+.uden_green {
+  padding-bottom: 100px;
 }
 
 .tema_2_web_billede {
@@ -515,9 +520,39 @@ footer {
   padding-bottom: 10px;
 }
 
+/********************* Tema 3 ********************/
+.h2_tema_2_web {
+  padding-top: 100px;
+}
+
+/********************* Tema 4 ********************/
+.gallery_2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.gallery_2 img {
+  height: 100%;
+  object-fit: cover;
+}
+
 /********************* Tema 5 ********************/
+.green_farve_temasider {
+  background-color: #919f89;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
 .tema_5_h2 {
   padding-top: 100px;
+}
+
+.tema_2_web_billede_2_1 {
+  padding-top: 100px;
+  padding-bottom: 10px;
 }
 
 /**** Videoer ****/
@@ -749,6 +784,11 @@ video {
     padding-right: 100px;
   }
 
+  .gallery_2 {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
   /********************* Tema 5 ********************/
 
   /**** Videoer ****/
@@ -760,5 +800,10 @@ video {
   video {
     padding-left: 100px;
     padding-right: 100px;
+  }
+
+  .tema_2_web_billede_2_1 {
+    width: 630px;
+    height: auto;
   }
 }
