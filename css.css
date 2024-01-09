@@ -24,32 +24,42 @@ video {
 
 /******************** menu ********************/
 
-@media (max-width: 1200px) {
+/**** Burgermenu ****/
+@media (max-width: 800px) {
   header {
     padding-bottom: 25px;
   }
 
+  /**** Skjuler checkbox ****/
   #menu_toggle {
     opacity: 0;
   }
 
+  /**** Når man klikker på burgermenu laver den kryds ****/
   #menu_toggle:checked + .menu_knap > span {
     transform: rotate(45deg);
   }
+  /*Samlet set betyder > span i dette kontekst, at CSS-reglen vil blive anvendt på <span>-elementet, der er et direkte barn af .menu_knap (label-elementet), når checkboxen med id "menu_toggle" er afkrydset (checked).*/
 
   #menu_toggle:checked + .menu_knap > span::before {
     top: 0;
     transform: rotate(0deg);
   }
+  /*Samlet set betyder #menu_toggle:checked + .menu_knap > span::before, at CSS-reglen vil blive anvendt på pseudo-elementet ::before på <span>-elementet, som er et direkte barn af .menu_knap (label-elementet), når checkboxen med id "menu_toggle" er afkrydset (checked). Dette er ofte brugt til at skabe ekstra dekorative elementer, såsom linjer eller symboler, før indholdet af det valgte element.*/
 
   #menu_toggle:checked + .menu_knap > span::after {
     top: 0;
     transform: rotate(90deg);
   }
+  /*Samlet set betyder #menu_toggle:checked + .menu_knap > span::after, at CSS-reglen vil blive anvendt på pseudo-elementet ::after på <span>-elementet, som er et direkte barn af .menu_knap (label-elementet), når checkboxen med id "menu_toggle" er afkrydset (checked). Dette kan bruges til at tilføje yderligere dekoration eller stil til "hamburger"-ikonet efter det faktiske indhold af <span>.*/
 
+  /**** Viser selve menuen ****/
   #menu_toggle:checked ~ ul {
     left: 0 !important;
   }
+  /*~: Dette er "general sibling combinator" og vælger alle efterfølgende søskende elementer af det tidligere valgte element, der deler samme forælder.*/
+
+  /**** Udsseende af burgermenu knappen ****/
   .menu_knap {
     position: fixed;
     top: 20px;
@@ -59,6 +69,8 @@ video {
     cursor: pointer;
     z-index: 1;
   }
+
+  /**** Viser burgermenu med de 3 streger ****/
   .menu_knap > span,
   .menu_knap > span::before,
   .menu_knap > span::after {
@@ -68,6 +80,7 @@ video {
     height: 2px;
     background-color: #fcfbf9;
   }
+
   .menu_knap > span::before {
     content: "";
     top: -8px;
@@ -77,6 +90,7 @@ video {
     top: 8px;
   }
 
+  /**** Andet ****/
   li {
     padding: 10px 0;
   }
@@ -102,10 +116,12 @@ video {
   }
 }
 
+/**** Desktopmenu ****/
 @media (min-width: 800px) {
   #menu_toggle {
     opacity: 0;
   }
+  /* Skjuler checkbox */
 
   .hamburger-menu label {
     position: absolute;
