@@ -1,6 +1,0 @@
-# Ignore Mac system files
-.DS_store
-# Ignore Video files
-*.mp4
-#Ignore Video folder
-/video
