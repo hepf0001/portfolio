@@ -1,0 +1,814 @@
+body {
+  background-color: #fcfbf9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*@media (min-width: 850px) {
+  main {
+    margin: 0 auto 0 auto;
+    max-width: 1200px;
+  }
+}*/
+
+/******************** menu ********************/
+
+@media (max-width: 1200px) {
+  header {
+    padding-bottom: 25px;
+  }
+
+  #menu_toggle {
+    opacity: 0;
+  }
+
+  #menu_toggle:checked + .menu_knap > span {
+    transform: rotate(45deg);
+  }
+
+  #menu_toggle:checked + .menu_knap > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  #menu_toggle:checked + .menu_knap > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  #menu_toggle:checked ~ ul {
+    left: 0 !important;
+  }
+  .menu_knap {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .menu_knap > span,
+  .menu_knap > span::before,
+  .menu_knap > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fcfbf9;
+  }
+  .menu_knap > span::before {
+    content: "";
+    top: -8px;
+  }
+  .menu_knap > span::after {
+    content: "";
+    top: 8px;
+  }
+
+  li {
+    padding: 10px 0;
+  }
+
+  .ul_menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #9bafb6;
+  }
+  a {
+    display: block;
+  }
+
+  .logo {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  #menu_toggle {
+    opacity: 0;
+  }
+
+  .hamburger-menu label {
+    position: absolute;
+    z-index: 1;
+  }
+  .hamburger-menu input {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .ul_menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 0;
+    padding-right: 80px;
+    font-size: 18px;
+  }
+}
+
+header {
+  background-color: #9bafb6;
+  position: sticky;
+  padding-bottom: 25px;
+  padding-top: 5px;
+  top: 0;
+  z-index: 2;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+}
+
+.logo_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding-left: 30px;
+}
+
+a {
+  color: #323e3f;
+  text-decoration: none;
+  padding: 5px 14px;
+
+  border-radius: 2%;
+  font-family: "Lato", sans-serif;
+}
+
+ul :hover {
+  color: #fcfbf9;
+}
+
+.aktiv :hover {
+  color: #323e3f;
+}
+
+.aktiv a {
+  color: #fcfbf9;
+}
+
+/******************** Fonte ********************/
+p {
+  font-family: "Martel", serif;
+  color: #323e3f;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  color: #323e3f;
+  font-size: 45px;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  color: #323e3f;
+  font-size: 30px;
+}
+
+li {
+  font-family: "Lato", sans-serif;
+  color: #323e3f;
+  font-size: 20px;
+}
+
+/******************** Luft ********************/
+h1 {
+  padding: 20px;
+  padding-bottom: 60px;
+  padding-top: 40px;
+}
+
+h2 {
+  padding: 20px;
+  padding-top: 30px;
+}
+
+p {
+  padding: 20px;
+}
+
+/**************** Index *******************/
+.forsidebillede_med_tekst {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.h1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fcfbf9;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.baggrund {
+  background-color: #9bafb6;
+}
+
+/**************** Footer *******************/
+footer {
+  background-color: #9bafb6;
+}
+
+.ul_footer {
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.logo_simpel_div {
+  display: flex;
+  justify-content: center;
+}
+
+.logo_simpel img {
+  width: 65px;
+  height: auto;
+  padding-top: 20px;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer {
+  flex: 1 0 200px;
+  text-align: center;
+}
+
+/**************** Knapper index *******************/
+
+.knap .button-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #323e3f;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fcfbf9;
+  color: #323e3f;
+  font-weight: bolder;
+}
+
+.knap .button-link:hover {
+  background-color: #323e3f;
+  color: #fcfbf9;
+}
+
+.knap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.knap_farve .button-link_farve {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #323e3f;
+  padding-left: 41px;
+  padding-right: 41px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #323e3f;
+  color: #fcfbf9;
+  font-weight: bolder;
+}
+
+.knap_farve .button-link_farve:hover {
+  background-color: #fcfbf9;
+  color: #323e3f;
+}
+
+.knap_farve {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/************** Portfolio side *****************/
+
+/**** knap ****/
+.knap_tema .button-link_green_farve {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #323e3f;
+  padding-left: 41px;
+  padding-right: 41px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #323e3f;
+  color: #fcfbf9;
+  font-weight: bolder;
+}
+
+.knap_tema .button-link_green_farve:hover {
+  background-color: #fcfbf9;
+  color: #323e3f;
+}
+
+.knap_tema {
+  display: flex;
+  justify-content: center;
+}
+
+/**** baggrundsfarve ****/
+.tema_farve {
+  background-color: #9fae95;
+}
+
+/**** Luft ****/
+.tema_2 {
+  padding-bottom: 50px;
+}
+
+.tema_2_2 h2 {
+  padding-top: 30px;
+}
+
+.tema_farve {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.tema_3_2 h2 {
+  padding-top: 30px;
+}
+
+.tema_4_2 h2 {
+  padding-top: 30px;
+}
+
+.tema_5 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.tema_5_2 h2 {
+  padding-top: 30px;
+}
+
+.knap_tema {
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+/**************** Billede med tekst - om mig *******************/
+.om_mig_billede_med_tekst {
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.lidt_om_mig_1 {
+  padding: 20px;
+}
+
+.h1_om_mig {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fcfbf9;
+  font-size: 34px;
+  font-weight: bolder;
+}
+
+/**************** Om mig *******************/
+.om_mig_underskrift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.underskrift {
+  width: 100px;
+  height: auto;
+  padding-bottom: 30px;
+}
+
+.skills {
+  background-color: #9fae95;
+}
+
+.skills_1 ul :hover {
+  color: #323e3f;
+}
+
+.skills_1 {
+  padding-left: 40px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.kode_design {
+  padding-bottom: 50px;
+}
+
+/********************* Tema 2 ********************/
+
+.button_farve_temasider .button_farve_temasider_1 {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #323e3f;
+  padding-left: 41px;
+  padding-right: 41px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #323e3f;
+  color: #fcfbf9;
+  font-weight: bolder;
+}
+
+.button_farve_temasider .button_farve_temasider_1:hover {
+  background-color: #fcfbf9;
+  color: #323e3f;
+}
+
+.button_farve_temasider {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.uden_green {
+  padding-bottom: 100px;
+}
+
+.tema_2_web_billede {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+}
+
+.tema_2_web_billede_2_2 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.tema_2_web_billede_2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/********************* Tema 3 ********************/
+.h2_tema_2_web {
+  padding-top: 100px;
+}
+
+/********************* Tema 4 ********************/
+
+/**** Galleri ****/
+.gallery_2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.gallery_2 img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/********************* Tema 5 ********************/
+
+/**** Galleri ****/
+.galleri_h2 {
+  padding-top: 100px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.gallery img {
+  height: 100%;
+  object-fit: cover;
+}
+.green_farve_temasider {
+  background-color: #9fae95;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.tema_5_h2 {
+  padding-top: 100px;
+}
+
+.tema_2_web_billede_2_1 {
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+
+/**** Videoer ****/
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/********************* DESKTOP ********************/
+
+@media (min-width: 1200px) {
+  /**************** Billede med tekst - index *******************/
+  .h1 {
+    font-size: 50px;
+    top: 40%;
+  }
+
+  /**************** Billede med tekst - om mig *******************/
+  .h1_om_mig {
+    font-size: 50px;
+  }
+
+  /************************ Footer **********************/
+  .ul_footer {
+    display: flex;
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  li {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /******************** Luft ********************/
+  h1 {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  h2 {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  p {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  /**************** Knapper index *******************/
+  .knap {
+    position: absolute;
+    top: 60%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .knap_farve {
+    position: absolute;
+    top: 60%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  /************** Portfolio side *****************/
+  .tema_farve {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .tema_2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .tema_2_1 img {
+    width: 550px;
+    height: auto;
+  }
+
+  .tema_2_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tema_2_2 {
+    order: -1;
+  }
+
+  .tema_3_1 img {
+    width: 550px;
+    height: auto;
+  }
+
+  .tema_3_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tema_4_1 img {
+    width: 550px;
+    height: auto;
+  }
+
+  .tema_4_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tema_5_1 img {
+    width: 550px;
+    height: auto;
+  }
+
+  .tema_5_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tema_5 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  /**** Luft ****/
+  .tema_2_2 p {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .h1_portfolio {
+    padding-left: 100px;
+  }
+
+  /************** om mig *****************/
+  .om_mig_h2 {
+    padding-top: 50px;
+  }
+
+  .lidt_om_mig_1 img {
+    width: 600px;
+    height: auto;
+    padding-left: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .lidt_om_mig {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .skills_1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .kode_design {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .skills_1 {
+    padding-left: 120px;
+  }
+
+  .kode_design {
+    padding-top: 30px;
+  }
+
+  /********************* Tema 2 ********************/
+
+  .green_farve_temasider {
+    padding-top: 80px;
+  }
+
+  .tema_2_web {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .tema_2_web_billede {
+    width: 630px;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .tema_2_web_billede_2 {
+    width: 630px;
+    height: auto;
+  }
+
+  .tema_2_web_billede_2_2 {
+    order: -1;
+    padding-left: 100px;
+  }
+
+  /**** Galleri ****/
+  .gallery {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .gallery_2 {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  /********************* Tema 4 ********************/
+  .gallery_2 {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+
+  /********************* Tema 5 ********************/
+
+  /**** Galleri ****/
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  /**** Videoer ****/
+  iframe {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  video {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .tema_2_web_billede_2_1 {
+    width: 630px;
+    height: auto;
+  }
+}
